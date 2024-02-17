@@ -1,0 +1,18 @@
+header{
+    border: red solid 2px;
+    padding: 20px 0;
+}
+header h1{
+    font-size: 23px;
+    font-weight: bold;
+}
+main{
+    width: 940px;
+    margin: 0 auto;
+    border: green solid 2px;
+}
+.caja-texarea{
+    width: 940px;
+    position: relative;
+    margin: auto;
+}
