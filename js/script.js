@@ -18,3 +18,4 @@ function descifrar(){
 texto_En_Pantalla("Ingrese el texto aqui","User-text","texto");
 texto_En_Pantalla("Ningún mensaje fue encontrado","h2","text");
 texto_En_Pantalla("Ingresa el texto que desees encriptar o desencriptar.","h3","text");
+texto_En_Pantalla("Cristian Peña","name", "text")
