@@ -1,20 +1,6 @@
+.container{
+    background-color: #F3F5FC;
+}
 header{
-    border: red solid 2px;
-    background-color: white;
-    padding: 20px 0;
-}
-.logo{
-    padding:40px 40px  ;
-    width: 5.4%;
-
-}
-main{
-    width: 940px;
-    margin: 0 auto;
-    border: green solid 2px;
-}
-.caja-texarea{
-    width: 940px;
-    position: relative;
-    margin: auto;
+    width: 1200px;
 }
