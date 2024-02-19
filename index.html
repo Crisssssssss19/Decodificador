@@ -2,25 +2,53 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="style/style-index.css">
-    <script src="js/script.js"></script>
     <title>Decodificador</title>
 </head>
 <body>
-    <header>
-        <img class="logo" src="img/logo.png" alt="logo">
-
-    </header>
-
-    <main>
-        <div class="caja-texarea">
-            <textarea name="" id="" cols="70" rows="20"></textarea>
-            <input  type="submit" onclick="cifrar();" value="Cifrar">
-            <input type="submit" onclick="descifrar();" value="Descifrar"> 
-        </div>
-    </main>
+    <div class="container">
+        <header>
+            <img class="logo" src="img/Logo.png" alt="logo">
     
+        </header>
+    
+        <main>
+                <div class="caja-texarea">
+                    <input type="text" name="" id="User-text" placeholder="">
+                    <div class="advertencia">
+                        <img src="img/bi_exclamation-circle-fill.png" alt="">
+                        <div>
+                            <h2>Solo letras minúsculas y sin acentos</h2>
+                        </div>
+                    </div>
+                    <div class="inputs">
+                        <input  type="submit" onclick="cifrar();" value="Cifrar">
+                        <input type="submit" onclick="descifrar();" value="Descifrar"> 
+                    </div>
+                    <div class="float-right">
+                        <aside>
+                            <ul>
+                                <li><img src="img/Muñeco.png"alt=""> </li>
+                                <li><h2 id="h2"></h2></li>
+                                <li><h3 id="h3"></h3></li>
+                            </ul>
+                        </aside>
+                    </div>
+                </div>
+                
+                
+                
+    
+            </div>
+            
+        </main>
+
+    </div>
+    
+
+    <script src="js/script.js"></script>
+
 </body>
 </html>
