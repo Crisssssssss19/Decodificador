@@ -1,3 +1,4 @@
 <h1>Decodificador</h1>
 
-- Estado del proyecto: 
+- Estado del proyecto: En desarrollo.
+

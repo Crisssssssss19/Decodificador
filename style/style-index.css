@@ -1,10 +1,12 @@
 header{
     border: red solid 2px;
+    background-color: white;
     padding: 20px 0;
 }
-header h1{
-    font-size: 23px;
-    font-weight: bold;
+.logo{
+    padding:40px 40px  ;
+    width: 5.4%;
+
 }
 main{
     width: 940px;
