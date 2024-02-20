@@ -1,4 +1,5 @@
 let text_elemet= "";
+let cadena=[] ;
 
 function texto_En_Pantalla(texto, id_elemt, elemet_tipe){
     text_elemet= document.getElementById(id_elemt);
@@ -9,7 +10,8 @@ function texto_En_Pantalla(texto, id_elemt, elemet_tipe){
     }
 }
 function cifrar(){
-    alert("Cifrar");
+    text_elemet = document.getElementById("User-text");
+    alert(text_elemet);
 }
 function descifrar(){
     
