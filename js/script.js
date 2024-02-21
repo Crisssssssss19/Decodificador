@@ -13,7 +13,7 @@ function new_content($text){
     /*Modificacion de estilos de float-right */
     const $float_right = document.querySelector("aside");
     $float_right.innerHTML = `
-    <textarea id="new-textarea" readonly> ${$text} </textarea>
+    <textarea id="new-textarea" readonly>${$text} </textarea>
     <button class="style-input" id="copiar">Copiar</button>`;
 
     const $text_area= document.getElementById("new-textarea");
@@ -29,6 +29,7 @@ function new_content($text){
     const $copy_btn = document.getElementById("copiar");
     $copy_btn.style.border="#0A3871 solid 1px";
     $copy_btn.style.color= "#0A3871";
+    $copy_btn.style.marginBottom = "10px";
    
 
 }

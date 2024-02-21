@@ -10,7 +10,6 @@ body{
 }
 .logo{
     margin: 20px;
-   
     width: 10%;
     float:inline-start;
     width: 120px;
@@ -23,7 +22,7 @@ body{
 }
 #User-text{
     background: #F3F5FC;
-    margin: 20px 20px 10px 20px;
+    margin: 0 20px;
     width: 680px;
     height: 400px;
     margin-top: 20%;
@@ -32,7 +31,6 @@ body{
     font-size: 26px;
     border: none;
     color: #0A3871;
-    
 }
 #User-text::placeholder{
     color: #0A3871;
@@ -51,7 +49,7 @@ body{
 /*Contendio de advertencia*/
 .advertencia{
     width: 680px;
-    margin: 20px 0px 0 0px;
+    margin: 15px 0px 0 0px;
     padding-bottom:10px;
     display:block;
     font-size: 13px;
