@@ -122,6 +122,11 @@ body{
 .float-right li{
     margin-bottom: 10px;
 }
+#text-aside-message{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
 
 footer{
     margin-top: 20px;
