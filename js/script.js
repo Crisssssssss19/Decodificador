@@ -10,40 +10,81 @@ function obtener_Datos(){
    return document.getElementById("User-text").value;
 }
 function new_content($text){
-    /*Modificacion de estilos de float-right */
-    const $float_right = document.querySelector("aside");
-    $float_right.innerHTML = `
-    <textarea id="new-textarea" readonly>${$text} </textarea>
-    <button class="style-input" id="copiar">Copiar</button>`;
-
-    const $text_area= document.getElementById("new-textarea");
-    $text_area.style.display ="flex";
-    $text_area.style.justifyContent ="center"
-    $text_area.style.width = "240px";
-    $text_area.style.height = "550px";
-    $text_area.style.resize = "none";
-    $text_area.style.border = "none";
-    $text_area.style.outline = "none";
-    $text_area.style.color ="#495057"
-
-    const $copy_btn = document.getElementById("copiar");
-    $copy_btn.style.border="#0A3871 solid 1px";
-    $copy_btn.style.color= "#0A3871";
-    $copy_btn.style.marginBottom = "10px";
-   
-
+    const $aside_ul = document.querySelector("#text-not-found");
+    const $encrypted_text = document.querySelector("#encrypted-text");
+    const $encrypted_textarea = document.getElementById("encrypted-textarea");
+    $aside_ul.style.display = "none";
+    $encrypted_text.style.display = "inline";
+    $encrypted_textarea.value = $text;
+    
 }
+/*La letra "e" es convertida para "enter"
+La letra "i" es convertida para "imes"
+La letra "a" es convertida para "ai"
+La letra "o" es convertida para "ober"
+La letra "u" es convertida para "ufat"
+*/
 function cifrar(){
-    let $cadena=[] ;
-    $cadena =obtener_Datos();
-    for(let i =0 ; i < $cadena.length; i++){
-        console.log($cadena[i]);
+    let $cadena_encriptada="";
+    let $cadena=obtener_Datos();
+    let $tabla_de_encriptacion={
+        a:"ai",
+        e:"enter",
+        i:"imes",
+        o:"ober",
+        u:"ufat"
+    };
+    for(const $letra of $cadena){
+
+        if($letra in $tabla_de_encriptacion){
+            $cadena_encriptada+=$tabla_de_encriptacion[$letra];
+        }else{
+            $cadena_encriptada+=$letra;
+        }
     }
-    new_content($cadena);
+
+  
+    if($cadena!= ""){
+        new_content($cadena_encriptada);
+    }else{
+        alert("El campo esta vacio..")
+    }
+    
     
 }
 function descifrar(){
-    
+    let $cadena_decodificada ="";
+    let $cadena_codificada=obtener_Datos();
+    let $tabla_de_palabras={
+        ai:"a",
+        enter:"e",
+        imes:"i",
+        ober:"o",
+        ufat:"u"
+    };
+    let i =0;
+    while(i < $cadena_codificada.length){
+        let esta = false;
+        for(let $palabra in $tabla_de_palabras){
+            if($cadena_codificada.substr(i,$palabra.length)===$palabra){
+                $cadena_decodificada+=$tabla_de_palabras[$palabra];
+                i +=$palabra.length;
+                esta =true;
+                break;
+            }
+        }
+        if(!esta){
+            $cadena_decodificada+=$cadena_codificada[i];
+            i++;
+        }
+    }
+    if($cadena_codificada!= ""){
+        new_content($cadena_decodificada);
+    }else{
+        alert("El campo esta vacio..")
+    }
+
+
 }
 
 texto_En_Pantalla("Ingrese el texto aqui","User-text","texto");
