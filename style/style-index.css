@@ -112,18 +112,44 @@ body{
 
 .float-right ul, .float-right img{
     padding: 20px;
-    width: 220px;
-    
+    width: 220px; 
 }
 .float-right li{
     margin-bottom: 10px;
     text-align: center;
 
 }
+#encrypted-text{
+    display: none;
+}
+
+#encrypted-textarea{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 240px;
+    height: 550px;
+    resize: none;
+    border: none;
+    outline: none;
+    color: #495057;
+
+}
+#copy{
+    border:#0A3871 solid 1px;
+    color: #0A3871;
+    margin-bottom: 10px;
+    background: #D8DFE8;
+}
 #text-aside-message{
     font-size: 24px;
     font-weight: bold;
     text-align: center;
+}
+#text-aside-info{
+    font-size: 16px;
+    color: #495057;
+
 }
 
 footer{
